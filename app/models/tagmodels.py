@@ -26,3 +26,6 @@ class tag(models.Model):
         auto_now=True,
         verbose_name="tag更新时间"
     )
+
+    class Meta:
+        app_label = 'app'

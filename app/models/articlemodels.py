@@ -13,7 +13,7 @@ class article(models.Model):
         verbose_name="文章简短描述"
     )
     category = models.ForeignKey(
-        'categorymodels.category',
+        'category',
         on_delete=models.PROTECT,
         verbose_name="文章类别id"
     )
@@ -34,3 +34,6 @@ class article(models.Model):
         auto_now=True,
         verbose_name="article更新时间"
     )
+    
+    class Meta:
+        app_label = 'app'

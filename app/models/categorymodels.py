@@ -20,3 +20,6 @@ class category(models.Model):
         auto_now=True,
         verbose_name="category更新时间"
     )
+
+    class Meta:
+        app_label = 'app'

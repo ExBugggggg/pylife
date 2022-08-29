@@ -23,9 +23,15 @@ class bill(models.Model):
         verbose_name="bill类型"
     )
 
+    class Meta:
+        app_label = 'app'
+
 class bill_type(models.Model):
     id = models.SmallAutoField(primary_key=True)
     name = models.CharField(
         max_length=16,
         unique=True
     )
+
+    class Meta:
+        app_label = 'app'

@@ -28,6 +28,9 @@ class todo(models.Model):
         verbose_name="todo_type的id"
     )
 
+    class Meta:
+        app_label = 'app'
+
 class todo_type(models.Model):
     id = models.SmallAutoField(primary_key=True)
     name = models.CharField(
@@ -38,5 +41,8 @@ class todo_type(models.Model):
     color = models.CharField(
         max_length=10,
         default="", 
-        varbose_name="todo标签的颜色"
+        verbose_name="todo标签的颜色"
     )
+
+    class Meta:
+        app_label = 'app'

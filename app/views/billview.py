@@ -6,9 +6,18 @@ from app.utils.response import HttpJsonResponse
 import json
 
 class bill:
+    """账单类
+    
+    接收和响应账单相关的数据
+    """
 
     @require_GET
     def get(request):
+        """处理bill的get相关请求逻辑
+        
+        Args:
+            request: 请求
+        """
         data = {
             'message': 'test',
             'data': [],
@@ -19,6 +28,11 @@ class bill:
 
     @require_POST
     def add(request):
+        """处理bill的add相关请求逻辑
+
+        Args:
+            request: 请求
+        """
         data = {
             'ping': 'bill add'
         }
@@ -26,6 +40,11 @@ class bill:
 
     @require_POST
     def edit(request):
+        """处理bill的edit相关请求逻辑
+
+        Args:
+            request: 请求
+        """
         data = {
             'ping': 'bill edit'
         }

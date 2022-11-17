@@ -14,6 +14,7 @@ OPTIONS_CODE = [
     500
 ]
 
+
 def HttpJsonResponse(code: int = 200, message: str = 'OK', data: any = [], options: any = {}):
     """响应JSON格式数据
 
@@ -26,7 +27,7 @@ def HttpJsonResponse(code: int = 200, message: str = 'OK', data: any = [], optio
         message(str): 返回给客户端的消息。非必须，默认值为OK。
         data(any): 返回给客户端的数据。非必须，默认值为[]。传入的参数需要可以被序列化成JSON字符串。
         options(any)：返回给客户端的数据。非必须，默认值为{}。
-    
+
     Examples:
         不使用自定义数据返回数据。
         HttpJsonResponse(code=200, message='this is a test message', data={'ping':'pong'})
@@ -40,7 +41,7 @@ def HttpJsonResponse(code: int = 200, message: str = 'OK', data: any = [], optio
         message = RESPONSE_CODE[code]
     elif code not in OPTIONS_CODE:
         message = RESPONSE_CODE[code]
-    
+
     return HttpResponse(json.dumps({
         'code': code,
         'message': message,

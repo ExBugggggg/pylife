@@ -24,4 +24,6 @@ urlpatterns = [
     path('category/edit', category.edit, name='edit'),
     # tag module
     path('tag/add', tag.add, name='add'),
+    path('tag/edit', tag.edit, name='edit'),
+    path('tag/index', tag.index, name='index'),
 ]
